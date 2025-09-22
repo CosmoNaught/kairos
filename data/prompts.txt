@@ -1,0 +1,173 @@
+Explain the core assumptions behind linear regression and when they break in practice.
+Summarize the bias–variance tradeoff with a concrete example from supervised learning.
+Contrast L1 vs L2 regularization: optimization geometry, sparsity, and when to prefer each.
+Explain cross-validation and why nested CV may be necessary for model selection.
+Describe overfitting, underfitting, and three concrete mitigation strategies.
+Explain the difference between empirical risk and expected risk.
+Provide an intuitive explanation of VC dimension and its practical relevance.
+Define calibration in probabilistic prediction and why it matters in deployment.
+Describe temperature scaling and when it fails to fix miscalibration.
+Explain selective prediction and abstention in risk-sensitive systems.
+Compare accuracy, F1, AUROC, and ECE for evaluating classifiers.
+Explain label shift vs covariate shift and how to detect each.
+Describe domain adaptation and one simple approach to reduce covariate shift.
+Explain ensembling and why it often improves calibration.
+Describe Bayesian model averaging in simple terms and its tradeoffs.
+Explain the reparameterization trick used in variational autoencoders.
+Contrast generative vs discriminative models with examples.
+Explain mutual information and one way it appears in representation learning.
+Discuss the curse of dimensionality and two practical remedies.
+Explain uniform convergence at a high level and why it underpins generalization bounds.
+Describe how dropout works and when it helps or hurts.
+Explain early stopping as an implicit regularizer.
+Compare SGD, momentum, and Adam: intuitions and pitfalls.
+Describe learning rate schedules and why warmup can help transformers.
+Explain gradient clipping and when it is important.
+Describe vanishing/exploding gradients and modern fixes.
+Explain attention and why it improves sequence modeling.
+Describe the transformer architecture at a high level.
+Explain why positional encodings are needed in transformers.
+Compare RNNs, LSTMs, GRUs, and transformers for language modeling.
+Describe subword tokenization (BPE) and its pros/cons.
+Explain perplexity and how to interpret it.
+Discuss exposure bias in autoregressive generation.
+Explain nucleus (top-p) sampling vs top-k sampling and their effects.
+Describe repetition penalties in decoding and why they help.
+Explain why long-form generation drifts and how to mitigate it.
+Design a minimal experiment to measure calibration of a language model.
+Propose a small ablation to test sensitivity to temperature scaling on a held-out split.
+Explain how to set up a calibration/train/test split to avoid leakage.
+Outline a lightweight pipeline for calibrated selective generation.
+Describe how to compute reliability diagrams with quantile binning.
+Explain Brier score and its decomposition.
+Argue for abstention as a safety feature in small language models.
+Explain why confidence should be independent from acceptance labels during calibration.
+Design a simple utility function for accept/abstain decisions.
+Explain how to tune a confidence threshold to target a coverage level.
+Discuss the tradeoff between coverage and selective accuracy.
+Explain the difference between aleatoric and epistemic uncertainty with examples.
+Describe conformal prediction at a very high level.
+Explain why temperature scaling is monotonic and preserves ranking.
+List common pitfalls when reporting calibration metrics.
+Explain how bootstrap CIs for mean ECE can be computed.
+Argue why paired tests (Wilcoxon/sign) are suitable across seeds.
+Explain why qualitative plots should use dense thresholds for smooth curves.
+Describe one way to stress-test miscalibration under distribution shift.
+Explain how prompt phrasing can affect length and perplexity.
+Write a concise overview of prompt sensitivity in small LMs.
+Explain when to prefer greedy decoding over sampling.
+Give a short guide to setting maximum/new tokens for reliable evaluation.
+Describe a method to detect degenerate repetition in outputs.
+Explain how to measure sentence count robustly in noisy generations.
+Propose a guardrail for maximum perplexity during evaluation.
+Explain how to sanitize model outputs before scoring.
+Discuss ethical considerations when deploying abstaining models.
+Explain how abstention changes user experience in interactive systems.
+Argue for transparency in risk communication for AI assistants.
+Explain dataset documentation practices that aid calibration studies.
+Describe how logging and reproducibility should be handled in small LM studies.
+Propose a naming convention for experiments and seeds to avoid confusion.
+Explain fair comparison principles for ablations.
+Write a 6–8 sentence explanation of why small LMs are attractive in resource-limited settings.
+Summarize three ways to reduce inference cost without hurting quality too much.
+Explain how quantization affects perplexity and calibration.
+Describe KV-cache and why it speeds up generation.
+Explain latency–quality tradeoffs in decoding parameters.
+Outline a simple load test for LM serving at small scale.
+Explain CPU vs GPU considerations for small LM evaluation.
+Write a simple checklist for running deterministic experiments with PyTorch.
+Describe common sources of nondeterminism in ML code.
+Explain how random seeds propagate through Python, NumPy, and PyTorch.
+Propose a folder structure for experiment outputs suitable for papers.
+Write a short rationale for releasing code and data artifacts.
+Explain how to anonymize logs for double-blind review.
+Summarize reviewer concerns likely to arise in a calibration paper.
+Draft a response to the concern “ECE can be gamed by binning choices.”
+Explain why you used quantile bins for reliability diagrams.
+Compare equal-width vs equal-mass binning for reliability plots.
+Describe how to overlay Wilson CIs on reliability curves.
+Explain the importance of showing both uncalibrated and calibrated plots.
+Describe a failure case where temperature scaling overconfidently extrapolates.
+Explain how to detect if temperature scaling is ill-posed on degenerate data.
+Argue for including histograms of confidences alongside reliability.
+Explain how to compute coverage–threshold sweeps.
+Explain how to draw ECE vs coverage curves and interpret them.
+Describe how to pick τ to target 70% coverage in deployment.
+Explain how to report selective accuracy fairly at matched coverage.
+Design a small ablation: changing min_tokens from 30 to 50 and its effects.
+Explain why sentence count matters for label independence.
+Discuss the danger of using confidence in the acceptance label during CAL.
+Explain how to avoid circularity between labels and confidences.
+Propose a synthetic prompt stress test for repetition.
+Write five brief prompts that elicit creative writing from a small LM.
+Write five brief prompts that elicit analytical explanations from a small LM.
+Explain why some prompts systematically cause short answers.
+Describe how to encourage longer outputs without prompt leakage.
+List three prompts likely to induce high perplexity continuations.
+Explain short vs long-tail prompt distributions and why it matters.
+Describe how to compute moving averages to smooth noisy curves.
+Explain why you should fix seeds across arms for paired testing.
+Argue when to use sign test vs Wilcoxon in small-sample paired settings.
+Explain why you report both mean and CI across seeds.
+Describe how to interpret non-overlapping CIs cautiously.
+Explain the difference between practical and statistical significance.
+Propose a template paragraph that defines “coverage” in selective generation.
+Write a template paragraph that defines “selective accuracy.”
+Explain what “abstain when uncertain” means operationally.
+Describe one realistic risk scenario where abstention prevents harm.
+Propose an FAQ entry: “Why not just use a bigger model?”
+Explain how small LMs can benefit from good calibration even if accuracy is lower.
+Discuss energy and cost implications of small LM deployment.
+Explain why temperature scaling is model-agnostic and easy to reproduce.
+Describe how to extend the lite pipeline to other modalities.
+Write a 5–7 sentence summary of this calibrated selective generation approach.
+Explain one limitation of temperature scaling and a possible fix.
+Argue for periodic recalibration when data drifts.
+Explain how to detect calibration drift in production logs.
+Describe a lightweight shadow evaluation pipeline for ongoing monitoring.
+Explain how to backtest different τ values on historical logs.
+Propose a dashboard widget that visualizes coverage vs risk in real time.
+Write a short “Methods” bullet list for this approach.
+Write a short “Limitations” bullet list for this approach.
+Write a short “Broader Impact” note tailored to small LMs.
+Explain how to compute a paired ΔECE per seed and aggregate statistics.
+Explain why you report both ECE and Brier.
+Describe how Brier decomposes into reliability and resolution.
+Explain why uncalibrated confidences can harm user trust.
+Describe a user study that could evaluate abstention usefulness.
+Explain how to set acceptance thresholds per user or per task.
+Argue for conservative defaults in safety-critical settings.
+Explain how to replicate the experiment on CPU only (slow but feasible).
+Describe why your gate uses perplexity cap rather than accuracy labels.
+Explain the difference between gate labels and task correctness labels.
+Argue that gate labels are confidence-independent by design.
+Write a paragraph that motivates temperature scaling with a toy example.
+Explain the logit transformation used in temperature scaling.
+Describe why temperature scaling preserves ranking and AUROC.
+Explain why ECE can improve while accuracy stays constant.
+Explain how to evaluate confidence monotonicity post-scaling.
+Propose a sanity check to ensure no NaNs or out-of-range probs.
+Explain how to seed shuffling of prompts per seed for fairness.
+Describe why repeats per prompt increase data density for plots.
+Write a brief note on why dense τ grids make smoother curves.
+Explain how to export CSVs that are easy to join in pandas.
+Propose a naming convention for figure files for quick LaTeX inclusion.
+Write a caption template for a reliability diagram comparing uncal vs cal.
+Write a caption template for an ECE vs coverage curve.
+Write a caption template for a confidence histogram.
+Explain how to compute Wilson intervals for bin proportions.
+Describe why calibration is especially important for abstention decisions.
+Explain how to interpret a kidney-shaped reliability curve.
+Explain why spikes at τ≈0.5 can appear in coverage sweeps.
+Describe a simple guard against adversarial or out-of-distribution prompts.
+Explain how to simulate distribution shift with small modifications to prompts.
+Write three prompts that should induce factual uncertainty.
+Write three prompts that should induce open-ended creative writing.
+Explain how style or tone in prompts can affect model behavior.
+Describe how to evaluate latency vs attempts (even in lite mode, attempts=1).
+Explain why we avoid using the metacognitive loop in the lite pipeline.
+Propose a small ablation that varies top-p and top-k during generation.
+Explain how decoding parameters influence perplexity and confidence mapping.
+Describe how to keep evaluation compute affordable in a student project.
+Propose a compact checklist to rerun the entire pipeline for a new seed.
+Write a short “Reproducibility” section outline for the paper.

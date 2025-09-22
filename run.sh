@@ -1,0 +1,20 @@
+python main.py demo \
+  --prompts_file data/prompts.txt \
+  --prompts_mode random \
+  --primary_metric indep \
+  --model gpt2-large \
+  --gen_temp 0.70 \
+  --k 5 \
+  --select_by uncal \
+  --coherence_feat \
+  --calibrator isotonic \
+  --weak_min_sents 2 \
+  --weak_cap 55 \
+  --cal_split 0.30 \
+  --target_cov 0.40 \
+  --n 60 \
+  --n_boot 200 \
+  --perm_reps 500 \
+  --seed 43 \
+  --out out_kairos_lite_explainer_ultra \
+  --save_json
