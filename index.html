@@ -43,7 +43,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Dynamic gradient mesh background */
+        
         .gradient-mesh {
             position: fixed;
             top: -50%;
@@ -74,7 +74,7 @@
             66% { transform: translate(-52%, -48%) rotate(240deg) scale(0.95); }
         }
 
-        /* Gradient underline for brand text */
+        
         .gradient-brand-text.with-underline {
             position: relative;
             display: inline-block;
@@ -96,7 +96,7 @@
             box-shadow: 0 0 20px rgba(124, 58, 237, 0.35);
         }
 
-        /* Floating particles */
+        
         .particles {
             position: fixed;
             top: 0;
@@ -130,7 +130,7 @@
             }
         }
 
-        /* Noise texture overlay */
+        
         .noise-overlay {
             position: fixed;
             top: 0;
@@ -143,7 +143,7 @@
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==');
         }
 
-        /* Loading bar */
+        
         .loading-bar {
             position: fixed;
             top: 0;
@@ -169,7 +169,7 @@
             100% { transform: scaleX(1); opacity: 0; }
         }
 
-        /* Intro overlay */
+        
         html.intro-lock, body.intro-lock { height: 100%; overflow: hidden; }
         body.intro-lock::-webkit-scrollbar { display: none; }
 
@@ -187,7 +187,7 @@
         .cinematic-intro.hide { opacity: 0; pointer-events: none; }
         .cinematic-intro.complete { display: none; }
 
-        /* Animated grid background */
+        
         .intro-grid {
             position: absolute;
             top: -50%;
@@ -208,7 +208,7 @@
             100% { transform: perspective(1000px) rotateX(60deg) translate(100px,100px); opacity: .5; }
         }
 
-        /* Multiple layered halos for depth */
+        
         .intro-halo {
             position: absolute;
             top: 50%;
@@ -260,7 +260,7 @@
             padding: 0 40px;
         }
 
-        /* Enhanced logo with shimmer effect */
+        
         .intro-logo {
             font-size: clamp(60px, 10vw, 120px);
             font-weight: 700;
@@ -344,7 +344,7 @@
 
         @keyframes lineGrow { to { width: 60%; } }
 
-        /* Title cards with glass morphism */
+        
         .title-cards {
             position: relative;
             margin-top: var(--cards-offset);
@@ -423,7 +423,7 @@
 
         @keyframes fadeIn { to { opacity: .6; } }
 
-        /* Hide scrollbar on root while preserving scroll */
+        
         html.hide-scrollbar, body.hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -438,7 +438,7 @@
 
         body { scrollbar-gutter: stable; }
 
-        /* Scroll-scrub section with depth */
+        
         .scroll-scrub-section {
             position: relative;
             height: calc(100vh * 4);
@@ -467,7 +467,7 @@
             background: transparent;
         }
 
-        /* Bottom-centered scroll hint */
+        
         .scroll-hint {
             position: absolute;
             left: 50%;
@@ -512,7 +512,7 @@
             50% { transform: translateY(6px); opacity: 1; }
         }
 
-        /* Ambient orbs that move with scroll */
+        
         .scroll-orbs {
             position: absolute;
             top: 0;
@@ -599,7 +599,7 @@
             filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
         }
 
-        /* staged H2 reveal */
+        
         .scrub-beat h2 .first-word {
             margin-right: .25ch;
         }
@@ -670,7 +670,7 @@
             transform: scaleX(1);
         }
 
-        /* Beat 4 - Enhanced with glass cards */
+        
         #beat4 {
             display: flex;
             flex-direction: column;
@@ -742,7 +742,7 @@
             transform: scaleX(1);
         }
 
-        /* Metrics with glass morphism cards */
+        
         .metrics {
             display: grid;
             grid-template-columns: repeat(3, minmax(220px, 260px));
@@ -836,7 +836,7 @@
             line-height: 1.4;
         }
 
-        /* Launch date with glow */
+        
         .launch-date {
             position: relative;
             display: inline-block;
@@ -882,7 +882,7 @@
             transform: translateY(0);
         }
 
-        /* Gradient underline without changing text color */
+        
         .underline-gradient {
             position: relative;
             display: inline-block;
@@ -904,7 +904,7 @@
             box-shadow: 0 0 20px rgba(124, 58, 237, 0.35);
         }
 
-        /* Links with hover glow */
+        
         .links {
             display: flex;
             gap: 32px;
@@ -942,7 +942,7 @@
             opacity: 1;
         }
 
-        /* Fade to black */
+        
         .cinematic-intro.fade-to-black .intro-grid,
         .cinematic-intro.fade-to-black .intro-halo {
             opacity: 0 !important;
@@ -954,7 +954,7 @@
             transition: opacity .6s cubic-bezier(.4,0,.2,1) !important;
         }
 
-        /* Lock at end */
+        
         html.end-lock, body.end-lock {
             height: 100%;
             overflow: hidden;
@@ -969,7 +969,7 @@
             inset: 0;
         }
 
-        /* Gradient brand text utility */
+        
         .gradient-brand-text {
             background: linear-gradient(90deg,
                 #fff 0%,
@@ -983,14 +983,14 @@
             background-clip: text;
         }
 
-        /* Reusable holographic shimmer */
+        
         .gradient-brand-text.shimmer {
             animation: shimmer 16s ease-in-out infinite;
             will-change: background-position;
             filter: drop-shadow(0 0 32px rgba(124, 58, 237, 0.28));
         }
 
-        /* Footer with subtle gradient */
+        
         .footer-section {
             position: relative;
             text-align: center;
@@ -1039,7 +1039,7 @@
             opacity: 1;
         }
 
-        /* Meet KAIROS Page Styles */
+        
         .meet-kairos-page {
             display: none;
             position: fixed;
@@ -1059,7 +1059,7 @@
             opacity: 1;
         }
 
-        /* Meet KAIROS background elements */
+        
         .meet-kairos-gradient-mesh {
             position: fixed;
             top: -50%;
@@ -1162,7 +1162,7 @@
             color: var(--text-muted);
         }
 
-        /* Comparison styles */
+        
         .comparison {
             margin-bottom: 2rem;
             border: 1px solid rgba(255,255,255,0.08);
@@ -1381,11 +1381,11 @@
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Viewport unit */
+        
         :root { --vh: 1vh; }
         @supports (height: 100dvh) { :root { --vh: 1dvh; } }
 
-        /* Safari fixes */
+        
         .scrub-beat h2 { -webkit-text-fill-color: initial; }
         .scrub-beat h2 .rest-of-h2 {
             background: linear-gradient(180deg,#fff 0%,#86868b 100%);
@@ -1394,7 +1394,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Title-card flicker fixes */
+        
         .title-card {
             will-change: opacity, transform;
             backface-visibility: hidden;
@@ -1407,10 +1407,10 @@
                 box-shadow .6s var(--easing);
         }
 
-        /* Safe viewport height */
+        
         .scroll-scrub-section { height: calc(4 * 100 * var(--vh)); }
 
-        /* Beat 4 centering */
+        
         #beat4 {
             position: absolute;
             top: 50%;
@@ -1424,7 +1424,7 @@
 
         .scrub-beat.active { opacity: 1; }
 
-        /* Respect reduced motion */
+        
         @media (prefers-reduced-motion: reduce) {
             * { animation: none !important; transition: none !important; }
         }
@@ -1433,12 +1433,12 @@
 <body>
     <div class="loading-bar"></div>
     
-    <!-- Dynamic background elements -->
+    
     <div class="gradient-mesh" id="gradientMesh"></div>
     <div class="particles" id="particles"></div>
     <div class="noise-overlay"></div>
     
-    <!-- Intro -->
+    
     <div class="cinematic-intro" id="cinematicIntro">
         <div class="intro-grid"></div>
         <div class="intro-halo"></div>
@@ -1470,7 +1470,7 @@
         <a href="#" class="skip-intro" onclick="skipIntro(); return false;">Skip intro</a>
     </div>
     
-    <!-- Beats -->
+    
     <div class="scroll-scrub-section" id="scrollScrub">
         <div class="scroll-scrub-content">
             <div class="scroll-orbs">
@@ -1550,9 +1550,9 @@
         </div>
     </div>
     
-    <!-- Meet KAIROS Page (hidden by default) -->
+    
     <div class="meet-kairos-page" id="meetKairosPage">
-        <!-- Dynamic background elements for Meet KAIROS page -->
+        
         <div class="meet-kairos-gradient-mesh"></div>
         <div class="particles" id="meetKairosParticles"></div>
         <div class="noise-overlay"></div>
@@ -1570,7 +1570,7 @@
                 <p>KAIROS vs baseline approaches: PPL@cov, Length@cov, Entropy@cov</p>
             </section>
             
-            <!-- Example 1: Real Output Example -->
+            
             <div class="comparison">
                 <div class="prompt-header">
                     <div class="prompt-title">
@@ -1614,7 +1614,7 @@
                 </div>
             </div>
             
-            <!-- Example 2: Coverage Precision -->
+            
             <div class="comparison">
                 <div class="prompt-header">
                     <div class="prompt-title">
@@ -1658,7 +1658,7 @@
                 </div>
             </div>
             
-            <!-- Example 3: Statistical Significance -->
+            
             <div class="comparison">
                 <div class="prompt-header">
                     <div class="prompt-title">
@@ -1702,7 +1702,7 @@
                 </div>
             </div>
             
-            <!-- Example 4: AUC Improvement -->
+            
             <div class="comparison">
                 <div class="prompt-header">
                     <div class="prompt-title">
@@ -1754,9 +1754,8 @@
     </div>
     
     <script>
-        // Copy all the JavaScript from ALETHIA version, updating function names for KAIROS
+                
         
-        /* Blob motion */
         (function() {
             const mesh = document.getElementById('gradientMesh');
             if (!mesh) return;
@@ -1829,8 +1828,7 @@
             requestAnimationFrame(tick);
         })();
         
-        // Generate floating particles
-        function createParticles() {
+                function createParticles() {
             const container = document.getElementById('particles');
             const particleCount = 50;
             
@@ -1846,7 +1844,7 @@
             }
         }
         
-        /* Scroll lock */
+        
         const ScrollLock = (() => {
             let locked = false;
             function prevent(e) { e.preventDefault(); }
@@ -1880,7 +1878,6 @@
         document.documentElement.classList.add('hide-scrollbar');
         document.body.classList.add('hide-scrollbar');
         
-        /* Wrap H2 text */
         function stageH2() {
             document.querySelectorAll('.scrub-beat h2').forEach(h2 => {
                 const first = h2.querySelector('.text.gradient-brand-text');
